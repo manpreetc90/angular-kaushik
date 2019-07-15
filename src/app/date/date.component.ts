@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateComponent implements OnInit {
 
+  // tslint:disable-next-line: no-inferrable-types
+  message: string = new Date().toDateString();
   constructor() { }
 
   ngOnInit() {
