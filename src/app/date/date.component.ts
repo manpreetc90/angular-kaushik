@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class DateComponent implements OnInit {
 
   // tslint:disable-next-line: no-inferrable-types
-  message: string = new Date().toDateString();
-  constructor() { }
+  dateMessage: string;
+  constructor() {
+    // tslint:disable-next-line: prefer-const
+    let currentDate = new Date();
+    this.dateMessage = currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
+   }
 
   ngOnInit() {
   }
